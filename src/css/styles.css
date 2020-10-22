@@ -1,0 +1,19 @@
+body {
+  background-color: lightblue;
+}
+
+textarea {
+  resize: none;
+}
+
+.side-bar {
+  margin-left: 20px;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.default-cursor {
+  cursor: default;
+}
