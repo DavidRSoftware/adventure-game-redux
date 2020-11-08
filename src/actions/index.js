@@ -61,3 +61,7 @@ export const addMessage = (message) => {
 export const changeBoard = (value) => {
   return { type: "CHANGE_BOARD", payload: value };
 };
+
+export const addItem = (item) => {
+  return { type: "ADD_ITEM", payload: item}
+}

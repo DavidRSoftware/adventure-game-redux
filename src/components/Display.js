@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { changeMoney, addMessage } from "../actions";
+import { addMessage } from "../actions";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Image from "react-bootstrap/Image";
@@ -9,10 +9,6 @@ import { Stage, Layer } from "react-konva";
 import coin from "../images/coin.png";
 
 const Display = (props) => {
-  const moneyClickHandler = () => {
-    props.changeMoney(100);
-    props.addMessage("You have gained 100 coins.");
-  };
 
   return (
     <div>
@@ -38,7 +34,6 @@ const Display = (props) => {
                     </div>
                   </Media.Body>
                 </Media>
-                <button onClick={() => moneyClickHandler()}>Click</button>
               </div>
             </Col>
           </Row>
@@ -53,4 +48,4 @@ const mapStateToProps = (state) => {
   return { money: state.changeMoneyReducer };
 };
 
-export default connect(mapStateToProps, { changeMoney, addMessage })(Display);
+export default connect(mapStateToProps, { addMessage })(Display);
