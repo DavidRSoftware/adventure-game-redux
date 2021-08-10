@@ -14,7 +14,7 @@ const App = (props) => {
         <Container>
           <Navbar.Brand>Adventure Game</Navbar.Brand>
           <Button
-            variant="success"
+            variant="danger"
             className=""
             onClick={() => props.startGame()}
           >

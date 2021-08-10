@@ -2,12 +2,12 @@ import React, { useEffect, useRef } from "react";
 import { connect } from "react-redux";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import TextareaAutosize from "react-textarea-autosize";
 
 const MessageBoard = (props) => {
   const textAreaRef = useRef(null);
 
   useEffect(() => {
-    console.log("Effect!");
     textAreaRef.current.scrollTop = textAreaRef.current.scrollHeight;
   });
 
@@ -15,13 +15,21 @@ const MessageBoard = (props) => {
     <div>
       <Row>
         <Col>
-          <textarea
+          <TextareaAutosize
+            value={props.message}
+            ref={textAreaRef}
+            readOnly
+            cols="50"
+            maxRows="5"
+            minRows="5"
+          />
+          {/* <textarea
             rows="5"
             cols="50"
             value={props.message}
             readOnly
             ref={textAreaRef}
-          ></textarea>
+          ></textarea> */}
         </Col>
       </Row>
     </div>
